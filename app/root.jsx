@@ -62,6 +62,7 @@ export async function loader({request, context}) {
   });
 }
 
+
 export default function App() {
   const data = useLoaderData();
   const locale = data.selectedLocale ?? DEFAULT_LOCALE;
