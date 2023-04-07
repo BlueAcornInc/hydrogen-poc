@@ -106,6 +106,7 @@ export function CatchBoundary() {
       </head>
       <body>
         <Layout
+        
           layout={root?.data?.layout}
           key={`${locale.language}-${locale.country}`}
         >

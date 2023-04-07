@@ -16,6 +16,7 @@ import {
   Cart,
   CartLoading,
   Link,
+  PromoBanner,
 } from '~/components';
 import {useParams, Form, Await, useMatches} from '@remix-run/react';
 import {useWindowScroll} from 'react-use';
@@ -33,6 +34,7 @@ export function Layout({children, layout}) {
             Skip to content
           </a>
         </div>
+        <PromoBanner />
         <Header
           title={layout?.shop.name ?? 'Hydrogen'}
           menu={layout?.headerMenu}

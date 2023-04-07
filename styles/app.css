@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.promo-banner {
+  background: #8e01f0;
+  text-align: center;
+  color: white;
+  padding: 12px;
+  font-weight: 700;
+}
+.pb-1 {
+  color: #cfc0da;
+}
+.pb-1:hover {
+  color: white;
+}
 
 .hydro-float {
   bottom: 21%;
