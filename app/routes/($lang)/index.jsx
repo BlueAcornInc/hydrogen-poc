@@ -254,3 +254,4 @@ export const FEATURED_COLLECTIONS_QUERY = `#graphql
     }
   }
 `;
+

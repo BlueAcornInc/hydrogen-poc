@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.hydro-float {
+  bottom: 21%;
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+      transform: translateY(0)
+  }
+
+  50% {
+      transform: translateY(10px)
+  }
+
+  to {
+      transform: translateY(0)
+  }
+}
+
 /* Tokens */
 :root {
   --color-primary: 20 20 20; /* Text, buttons, etc. */
