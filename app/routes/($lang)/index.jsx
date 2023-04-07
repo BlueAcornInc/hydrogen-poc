@@ -181,10 +181,16 @@ const COLLECTION_CONTENT_FRAGMENT = `#graphql
         ...Media
       }
     }
+    spreadAltText: metafield(namespace: "hero", key: "spread_alt_text") {
+      value
+    }
     spreadSecondary: metafield(namespace: "hero", key: "spread_secondary") {
       reference {
         ...Media
       }
+    }
+    spreadSecondaryAltText: metafield(namespace: "hero", key: "secondary_spread_alt_text") {
+      value
     }
   }
 `;

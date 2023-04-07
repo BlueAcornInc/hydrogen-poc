@@ -13,9 +13,15 @@ export function Hero({
   height,
   loading,
   spread,
+  spreadAltText,
   spreadSecondary,
+  spreadSecondaryAltText,
   top,
 }) {
+
+  const spreadAlt = spreadAltText?.value;
+  const spreadSecondaryAlt = spreadSecondaryAltText?.value;
+
   return (
     <Link to={`/collections/${handle}`}>
       <section
@@ -44,7 +50,8 @@ export function Hero({
                 }
                 width={spreadSecondary?.reference ? 375 : 750}
                 data={spread.reference}
-                loading={loading}
+                loading={loading}  
+                alt={spreadAlt}              
               />
             </div>
           )}
@@ -56,6 +63,7 @@ export function Hero({
                 width={375}
                 data={spreadSecondary.reference}
                 loading={loading}
+                alt={spreadSecondaryAlt}
               />
             </div>
           )}
@@ -72,13 +80,14 @@ export function Hero({
             </Text>
           )}
           {cta?.value && <Text size="lead">{cta.value}</Text>}
+         
         </div>
       </section>
     </Link>
   );
 }
 
-function SpreadMedia({data, loading, decoding, scale, sizes, width, widths}) {
+function SpreadMedia({data, loading, decoding, scale, sizes, width, widths, alt}) {
   return (
     <MediaFile
       data={data}
@@ -100,7 +109,7 @@ function SpreadMedia({data, loading, decoding, scale, sizes, width, widths}) {
           widths,
           sizes,
           width,
-          alt: data.alt || '',
+          alt,
         },
       }}
     />
