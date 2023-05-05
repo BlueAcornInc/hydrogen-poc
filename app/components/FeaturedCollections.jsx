@@ -1,12 +1,34 @@
 import {Image} from '@shopify/hydrogen';
 import {Heading, Section, Grid, Link} from '~/components';
+import {useState, useEffect} from 'react';
 
 export function FeaturedCollections({
-  collections,
+  collections: initialCollections,
   title = 'Collections',
   ...props
 }) {
+  const [collections, setCollections] = useState(initialCollections);
+
+  const loadFeaturedCollectionsData = async () => {
+    const filteredCollections = await [...collections].filter(
+      (collection) => collection.handle.toLowerCase() !== 'freestyle',
+    );
+
+    setCollections(filteredCollections);
+  };
+
+  useEffect(() => {
+    loadFeaturedCollectionsData();
+    // dependency array is empty so data loads once, on load
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const haveCollections = collections && collections.length > 0;
+
+  console.log('collections, begin ========');
+  console.log({collections});
+  console.log('collections, end ========');
+
   if (!haveCollections) return null;
 
   const items = collections.filter((item) => item.image).length;
