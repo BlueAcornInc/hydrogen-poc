@@ -8,7 +8,7 @@ const PLACEHOLDERS = {
         value: 'The All New Hydrogen Snowboard Exclusively From Shopify',
       },
       cta: {value: 'Shop Now →'},
-      handle: 'freestyle',
+      handle: 'freestyle-content',
       spread: {
         reference: {
           mediaContentType: 'IMAGE',

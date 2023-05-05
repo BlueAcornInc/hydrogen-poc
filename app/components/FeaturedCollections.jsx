@@ -11,7 +11,7 @@ export function FeaturedCollections({
 
   const loadFeaturedCollectionsData = async () => {
     const filteredCollections = await [...collections].filter(
-      (collection) => collection.handle.toLowerCase() !== 'freestyle',
+      (collection) => collection.handle.toLowerCase() !== 'freestyle-content',
     );
 
     setCollections(filteredCollections);
@@ -24,10 +24,6 @@ export function FeaturedCollections({
   }, []);
 
   const haveCollections = collections && collections.length > 0;
-
-  console.log('collections, begin ========');
-  console.log({collections});
-  console.log('collections, end ========');
 
   if (!haveCollections) return null;
 
