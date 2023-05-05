@@ -9,6 +9,7 @@
   padding: 12px;
   font-weight: 700;
 }
+
 .pb-1 {
   color: #cfc0da;
 }
@@ -17,7 +18,8 @@
 }
 
 .hydro-float {
-  bottom: 21%;
+  bottom: 23%;
+  width: 300px;
 }
 .animate-float {
   animation: float 3s ease-in-out infinite;
