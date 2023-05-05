@@ -15,6 +15,7 @@ import {seoPayload} from '~/lib/seo.server';
 import {CACHE_SHORT, routeHeaders} from '~/data/cache';
 
 const PAGINATION_SIZE = 8;
+const CONTENT_HANDLE = 'freestyle-content';
 
 export const headers = routeHeaders;
 
@@ -88,13 +89,15 @@ export default function Collections() {
                 items={nodes.length === 3 ? 3 : 2}
                 data-test="collection-grid"
               >
-                {nodes.map((collection, i) => (
-                  <CollectionCard
-                    collection={collection}
-                    key={collection.id}
-                    loading={getImageLoadingPriority(i, 2)}
-                  />
-                ))}
+                {nodes
+                  .filter((collection) => collection.handle !== CONTENT_HANDLE)
+                  .map((collection, i) => (
+                    <CollectionCard
+                      collection={collection}
+                      key={collection.id}
+                      loading={getImageLoadingPriority(i, 2)}
+                    />
+                  ))}
               </Grid>
               {hasNextPage && (
                 <div className="flex items-center justify-center mt-6">
