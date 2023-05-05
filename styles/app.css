@@ -27,6 +27,10 @@
   fill: #000;
 }
 
+button.bg-primary, span.bg-primary {
+  background-color: #8e01f0;
+}
+
 .pb-1 {
   color: #cfc0da;
 }
