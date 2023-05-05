@@ -23,6 +23,9 @@
 .fill {
   fill: #8e01f0;
 }
+.fill-dark {
+  fill: #000;
+}
 
 .pb-1 {
   color: #cfc0da;

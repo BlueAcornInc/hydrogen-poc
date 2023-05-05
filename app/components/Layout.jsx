@@ -194,7 +194,19 @@ function MobileHeader({title, isHome, openCart, openMenu}) {
         to="/"
       >
         <Heading className="font-bold text-center" as={isHome ? 'h1' : 'h2'}>
-          {title}
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+            <path className={`${
+              isHome
+              ? 'stroke'
+              : 'fill'
+            }`}
+            fill-rule="evenodd" d="M16.1 16.04 1 8.02 6.16 5.3l5.82 3.09 4.88-2.57-5.82-3.1L16.21 0l15.1 8.02-5.17 2.72-5.5-2.91-4.88 2.57 5.5 2.92-5.16 2.72Z"/>
+            <path className={`${
+              isHome
+              ? 'fill'
+              : 'fill-dark'
+            }`} fill-rule="evenodd" d="M16.1 32 1 23.98l5.16-2.72 5.82 3.08 4.88-2.57-5.82-3.08 5.17-2.73 15.1 8.02-5.17 2.72-5.5-2.92-4.88 2.58 5.5 2.92L16.1 32Z"/>
+          </svg>
         </Heading>
       </Link>
 
