@@ -10,6 +10,20 @@
   font-weight: 700;
 }
 
+.hero-content {
+  position: absolute;
+  width: 100%;
+  padding-bottom: 73px;
+}
+
+
+.stroke {
+  stroke: #fff;
+}
+.fill {
+  fill: #8e01f0;
+}
+
 .pb-1 {
   color: #cfc0da;
 }
@@ -18,9 +32,18 @@
 }
 
 .hydro-float {
-  bottom: 23%;
-  width: 300px;
+  bottom: 21%;
+  width: 200px;
 }
+
+@media (min-width: 48em) {
+  .hydro-float {
+    bottom: 23%;
+    width: 300px;
+  } 
+}
+
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
