@@ -50,7 +50,7 @@ export async function loader({params, context}) {
       ),
       secondaryHero: context.storefront.query(COLLECTION_HERO_QUERY, {
         variables: {
-          handle: 'backcountry',
+          handle: 'blue-acorn-content',
           country,
           language,
         },
@@ -174,6 +174,9 @@ const COLLECTION_CONTENT_FRAGMENT = `#graphql
       value
     }
     cta: metafield(namespace: "hero", key: "cta") {
+      value
+    }
+    promo: metafield(namespace: "hero", key: "promo") {
       value
     }
     spread: metafield(namespace: "hero", key: "spread") {

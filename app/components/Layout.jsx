@@ -26,6 +26,11 @@ import {useIsHydrated} from '~/hooks/useIsHydrated';
 import {useCartFetchers} from '~/hooks/useCartFetchers';
 
 export function Layout({children, layout}) {
+  console.log("we are the champi--uh, layout");
+  console.log(layout);
+
+  const tempPromoString = "Shop smart! Shop S-MART!";
+
   return (
     <>
       <div className="flex flex-col min-h-screen">
@@ -34,7 +39,7 @@ export function Layout({children, layout}) {
             Skip to content
           </a>
         </div>
-        <PromoBanner />
+        <PromoBanner promo={layout?.shop.name && tempPromoString} />
         <Header
           title={layout?.shop.name ?? 'Hydrogen'}
           menu={layout?.headerMenu}
