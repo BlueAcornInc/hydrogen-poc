@@ -26,7 +26,7 @@ export function Hero({
 
   return (
     <Link to={`/collections/${handle}`}>
-      <PromoBanner promo={currentPromo} />
+      {currentPromo && <PromoBanner promo={currentPromo} />}
       <section
         className={clsx(
           'relative justify-end flex flex-col w-full',
