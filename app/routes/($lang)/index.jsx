@@ -66,7 +66,7 @@ export async function loader({params, context}) {
       ),
       tertiaryHero: context.storefront.query(COLLECTION_HERO_QUERY, {
         variables: {
-          handle: 'winter-2022',
+          handle: 'blue-acorn',
           country,
           language,
         },

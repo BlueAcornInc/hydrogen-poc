@@ -16,7 +16,6 @@
   padding-bottom: 73px;
 }
 
-
 .stroke {
   stroke: #fff;
 }
@@ -35,7 +34,7 @@ button.bg-primary, span.bg-primary {
   color: #cfc0da;
 }
 .pb-1:hover {
-  color: white;
+  color: #8e01f0;
 }
 
 .hydro-float {
