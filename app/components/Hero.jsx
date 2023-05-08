@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import {MediaFile} from '@shopify/hydrogen';
-import {Heading, Text, Link} from '~/components';
+import {Heading, Text, Link, PromoBanner} from '~/components';
 
 /**
  * Hero component that renders metafields attached to collection resources
@@ -17,13 +17,16 @@ export function Hero({
   spreadSecondary,
   spreadSecondaryAltText,
   top,
+  promo,
 }) {
 
   const spreadAlt = spreadAltText?.value;
   const spreadSecondaryAlt = spreadSecondaryAltText?.value;
+  const currentPromo = promo?.value;
 
   return (
     <Link to={`/collections/${handle}`}>
+      <PromoBanner promo={currentPromo} />
       <section
         className={clsx(
           'relative justify-end flex flex-col w-full',

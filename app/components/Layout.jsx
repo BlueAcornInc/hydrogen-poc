@@ -34,7 +34,7 @@ export function Layout({children, layout}) {
             Skip to content
           </a>
         </div>
-        <PromoBanner />
+        {/* <PromoBanner /> */}
         <Header
           title={layout?.shop.name ?? 'Hydrogen'}
           menu={layout?.headerMenu}

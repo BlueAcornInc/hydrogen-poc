@@ -1,11 +1,7 @@
-
-export function PromoBanner () {
+export function PromoBanner({promo}) {
   return (
-
     <div className="promo-banner">
-       Welcome to Shopify Hydrogen
+      {promo ? promo : 'Welcome to Shopify Hydrogen'}
     </div>
-
   );
 }
- 
