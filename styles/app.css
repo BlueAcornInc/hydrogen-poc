@@ -2,12 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+header[role=banner] {
+  /* temp fix */
+  margin-top: 48px;
+}
+
 .promo-banner {
   background: #8e01f0;
   text-align: center;
   color: white;
   padding: 12px;
   font-weight: 700;
+  /* temp fix */
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .hero-content {
